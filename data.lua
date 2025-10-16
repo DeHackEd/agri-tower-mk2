@@ -4,7 +4,12 @@
 
 -- Update the regular tower before we copy it
 data.raw['agricultural-tower']['agricultural-tower'].fast_replaceable_group = 'agricultural-tower-3x3'
-data.raw['agricultural-tower']['agricultural-tower'].next_upgrade = 'agricultural-tower-mk2'
+
+-- This line would be preferable, but it breaks some mods which are modifying
+-- the agritower in their "data-final-fixes". My options are to mark them
+-- as optional dependencies, or forgo this line.
+-- When enabled, upgrade planner auto-upgrades towers. Without, manual selection required.
+--data.raw['agricultural-tower']['agricultural-tower'].next_upgrade = 'agricultural-tower-mk2'
 
 
 local new_tower = table.deepcopy(data.raw['agricultural-tower']['agricultural-tower'])
@@ -14,13 +19,13 @@ new_tower.growth_grid_tile_size = 2
 -- The "radius" is how many tiles in each direction from the tower itself
 -- it can plant. With a smaller tile size, increase this to cover more
 -- physical area to make up for it. However this does result in a +1 total
--- to the overall radius (21x21 coverage becomes 23x23)
+-- to the overall radius (21x21 overall coverage becomes 23x23)
 new_tower.radius = 4
 
--- Upgrade planneer compatibility
-new_tower.next_upgrade = nil
+-- Upgrade planneer compatibility. Not needed due to above commented feature.
+--new_tower.next_upgrade = nil
 
--- Plant consistently, row by row, rather than random tiles
+-- Plant consistently, row by row, rather than random tiles.
 new_tower.randomize_planting_tile = false
 
 
@@ -31,6 +36,7 @@ util.recursive_tint(new_tower, {1, 0.5, 0, 1})
 
 -- The visualization squares are their own sprites with their own sizes.
 -- We must override them or the squares overlap and look weird.
+-- TODO: I suspect this is a factorio bug. If it gets fixed, this can be eliminated.
 new_tower.radius_visualisation_picture = {
 	filename = '__agri-tower-mk2__/graphics/tower-shrunk-square.png',
 	priority = "extra-high-no-scale",

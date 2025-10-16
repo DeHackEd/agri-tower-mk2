@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+DatE: 2025-10-16
+  Compatibility:
+    - Upgrade planner must be programmed to upgrade towers.
+      Needed for compatibility with other mods that also modify towers.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2025-10-11
   Major Features:
