@@ -1,0 +1,9 @@
+{
+  "name": "agri-tower-mk2",
+  "version": "0.1.0",
+  "title": "Agricultural tower mk2",
+  "author": "DeHackEd",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0.7", "space-age >= 2.0.7"],
+  "description": "Adds a tier 2 agricultural tower which plants trees more densely and consistently."
+}
