@@ -45,6 +45,8 @@ new_tower.radius_visualisation_picture = {
 	scale = 0.25
 }
 
+new_tower.icons = {{ icon = "__space-age__/graphics/icons/agricultural-tower.png", tint = {1, 0.5, 0, 1} }}
+
 local new_item = table.deepcopy(data.raw['item']['agricultural-tower'])
 new_item.name = 'agricultural-tower-mk2'
 new_item.place_result = 'agricultural-tower-mk2';
