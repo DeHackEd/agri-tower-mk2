@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2026-02-22
+  Bugfixes:
+    - Changelog not visible in game due to formating errors
+    - Upgrade planner icon was missing the colour tint
+    - Mod now shows up with the Space Age special indicator in the mod portal and listing
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2025-10-16
   Compatibility:
