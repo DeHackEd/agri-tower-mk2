@@ -5,5 +5,6 @@
   "author": "DeHackEd",
   "factorio_version": "2.0",
   "dependencies": ["base >= 2.0.7", "space-age >= 2.0.7"],
-  "description": "Adds a tier 2 agricultural tower which plants trees more densely and consistently."
+  "description": "Adds a tier 2 agricultural tower which plants trees more densely and consistently.",
+  "spoiling_required": true
 }
